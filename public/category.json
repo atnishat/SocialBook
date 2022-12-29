@@ -1,0 +1,34 @@
+[
+    {
+      "id": "01",
+      "name": "Find Friend"
+    },
+    {
+      "id": "02",
+      "name": "All Groups"
+    },
+    {
+      "id": "03",
+      "name": "Most Recent News"
+    },
+    {
+      "id": "04",
+      "name": "Marketplace"
+    },
+    {
+      "id": "05",
+      "name": "Watch"
+    },
+    {
+      "id": "06",
+      "name": "Memory"
+    },
+    {
+      "id": "07",
+      "name": "Saved"
+    },
+    {
+      "id": "08",
+      "name": "Pages"
+    }
+  ]
