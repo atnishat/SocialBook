@@ -4,7 +4,7 @@ import './leftside.css'
 
 const Leftside = () => {
     return (
-        <div className='category ml-10 font-bold text-2xl mt-20 w-1/6'>
+        <div className='ml-5 font-bold text-2xl rounded-2xl bg-slate-50'>
             <Category></Category>
         </div>
     );

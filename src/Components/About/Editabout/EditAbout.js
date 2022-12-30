@@ -27,7 +27,7 @@ const EditAbout = () => {
             .then(res => res.json())
             .then(result => {
                 console.log(result);
-                if (result.modifiedCount > 0) {
+                if (result.acknowledged) {
                        toast.success('Update successfully');
                     // event.target.reset();
         //             // navigate('/media')

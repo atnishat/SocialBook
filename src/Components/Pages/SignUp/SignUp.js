@@ -51,8 +51,8 @@ const SignUp = () => {
   
 
     return (
-        <div className=' flex justify-center items-center'>
-            <div className='w-96 p-7 bg-slate-400 ml-60 rounded mt-10'>
+        <div className=''>
+            <div className='w-96 p-7 ml-20 mr-24 bg-slate-400  rounded mt-10'>
                 <h2 className='text-xl text-center'>Sign Up</h2>
                 <form onSubmit={handleSubmit(handleSignUp)}>
                     <div className="form-control w-full max-w-xs">

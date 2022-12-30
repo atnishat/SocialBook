@@ -55,12 +55,12 @@ const Login = () => {
 
 
     return (
-        <div className=' flex justify-center items-center'>
-            <div className='w-96 p-7 bg-slate-400 ml-60 rounded mt-10'>
-                <h2 className='text-xl text-center'>Login</h2>
+        <div className='w-1/2'>
+            <div className=' p-7 bg-slate-400  rounded mt-10'>
+                <h2 className=' text-center text-2xl'>Login</h2>
                 <form onSubmit={handleSubmit(handleLogin)} >
-                    <div className="form-control w-full max-w-xs">
-                        <label className="label"> <span className="label-text">Email</span></label>
+                    <div className="form-control w-full max-w-xs ml-32 mt-5">
+                        <label className="label text-xl font-bold"> <span className="label-text">Email</span></label>
                         <input type="text"
                             {...register("email", {
                                 required: "Email Address is required"
@@ -68,7 +68,7 @@ const Login = () => {
                             className="input input-bordered w-full max-w-xs" />
                         {errors.email && <p className='text-red-600'>{errors.email?.message}</p>}
                     </div>
-                    <div className="form-control w-full max-w-xs">
+                    <div className="form-control w-full max-w-xs ml-32">
                         <label className="label"> <span className="label-text">Password</span></label>
                         <input type="password"
                             {...register("password", {
@@ -79,14 +79,14 @@ const Login = () => {
                         <label className="label"> <span className="label-text">Forget Password?</span></label>
                         {errors.password && <p className='text-red-600'>{errors.password?.message}</p>}
                     </div>
-                    <input className='btn btn-outline w-full' value="Login" type="submit" />
+                    <input className='btn btn-outline w-44 ml-52' value="Login" type="submit" />
                     <div>
                         {loginError && <p className='text-red-600'>{loginError}</p>}
                     </div>
                 </form>
-                <p>New to SocialBook <Link className='text-secondary' to="/signup">Create new Account</Link></p>
+                <p className='ml-32'>New to SocialBook <Link className='text-secondary' to="/signup">Create new Account</Link></p>
                 <div className="divider">OR</div>
-                <button onClick={handleGoogleSignIn} className='btn btn-outline w-full'>CONTINUE WITH GOOGLE</button>
+                <button onClick={handleGoogleSignIn} className='btn btn-outline w-60 ml-40'>CONTINUE WITH GOOGLE</button>
             </div>
         </div>
     );

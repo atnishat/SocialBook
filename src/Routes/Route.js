@@ -3,12 +3,12 @@ import {createBrowserRouter} from 'react-router-dom'
 import About from '../Components/About/About';
 import AllAbout from '../Components/About/Allabout/AllAbout';
 import EditAbout from '../Components/About/Editabout/EditAbout';
-import Addpost from '../Components/AddPost/Addpost';
 import Category from '../Components/Category/Category';
 import Media from '../Components/Media/Media';
 import Home from '../Components/Pages/Home/Home'
 import Login from '../Components/Pages/Login/Login';
 import SignUp from '../Components/Pages/SignUp/SignUp';
+import Posts from '../Components/Post/Posts';
 import Main from '../Layout/Main'
 import ProvateRoutes from '../Routes/ProvateRoutes/ProvateRoutes';
 
@@ -34,8 +34,7 @@ import ProvateRoutes from '../Routes/ProvateRoutes/ProvateRoutes';
             {
                 path:'/category/:id',
                 element:<Category></Category>
-            }
-            ,
+            },
             {
                 path:'/media',
                 element:<ProvateRoutes><Media></Media></ProvateRoutes>,
@@ -50,7 +49,7 @@ import ProvateRoutes from '../Routes/ProvateRoutes/ProvateRoutes';
             {
                 path:'/allabout',
                 element:<ProvateRoutes><AllAbout></AllAbout></ProvateRoutes>,
-                loader:() => fetch(`http://localhost:5000/allmediaposts`)
+                loader:() => fetch(`http://localhost:5000/aboutusers`)
             },
             {
                 path:'/update/:email',
@@ -58,7 +57,13 @@ import ProvateRoutes from '../Routes/ProvateRoutes/ProvateRoutes';
                 loader:({params}) => fetch(`http://localhost:5000/users/${params.email}`)
             }
         ]
-    }
+    },
+    {
+        path:'/',
+        element:<Posts></Posts>,
+        // loader:()=> fetch(`http://localhost:5000/allmediaposts`)
+    },
+   
 ])
 
 export default router;

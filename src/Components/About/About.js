@@ -6,8 +6,8 @@ import { AuthContext } from '../../Contexts/AuthProvider';
 
 const About = () => {
 
-    // const { register, formState: { errors }, handleSubmit } = useForm();
     const { user } = useContext(AuthContext);
+    // console.log(user);
     const [allUsers, setallUsers] = useState({});
     // const location = useLocation();
     const navigate = useNavigate();
@@ -15,7 +15,7 @@ const About = () => {
     // const from = location.state?.from?.pathname || '/';
 
     const handleSubmit = event => {
-        // console.log(event);
+        console.log(event);
         event.preventDefault();
         console.log(allUsers);
         fetch('http://localhost:5000/aboutusers', {
@@ -30,8 +30,8 @@ const About = () => {
                     console.log(result);
                     if(result.acknowledged){
                    toast.success(`About added successfully`);
-        //         //    event.target.reset();
-                    navigate('/media')
+        // //         //    event.target.reset();
+        //             navigate('/media')
                     }
                  
                 })
@@ -41,14 +41,14 @@ const About = () => {
 
 
     const handlepost = event => {
-        console.log(event);
+        // console.log(event);
         const field = event.target.name;
         const value = event.target.value;
         const newUser = {...allUsers}
         newUser[field]=value;
         setallUsers(newUser);
 
-        // console.log(email,name,University,address);
+    
       
     }
 
@@ -78,8 +78,8 @@ const About = () => {
                     <input onBlur={handlepost} type="text" name='address' className="input input-bordered w-full max-w-xs" />
                     <label className="label"> <span className="label-text"></span></label>
                 </div>
-                <a href='/allabout'>
-                <input className='btn btn-outline w-full text-slate-900 font-bold text-2xl' value="Submit" type="submit" />
+                <a href='/allabout'  className='btn btn-outline w-full text-slate-900 font-bold text-2xl'>
+                Submit
                 </a>
             </form>
             </div>

@@ -1,24 +1,44 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
+import FirstSection from '../First Section/FirstSection';
+import Posts from '../Post/Posts';
 import Mediapost from './Mediapost';
 
 const Media = () => {
 
 
     const user = useLoaderData();
+    const [allPost, setallPost] = useState();
     console.log(user);
 
     return (
-        <div className='w-2/4 mt-36 flex'>
+        <div>
+
+            <FirstSection></FirstSection>
 
 
-            {
-                user.map(alluser => <Mediapost
-                    key={alluser._id}
-                    mediaPost={alluser}>
+            <div className=' mt-10 w-full'>
+                {
+                    user.map(alluser => <Mediapost
+                        key={alluser._id}
+                        mediaPost={alluser}
+                        alluser={setallPost}
+                        >
 
-                </Mediapost>)
-            }    </div>
+                    </Mediapost>)
+                }
+            </div>
+
+            {/* {
+                allPost && <Posts
+                allPost={setallPost}
+                ></Posts>
+            } */}
+
+
+
+
+        </div>
     );
 };
 
