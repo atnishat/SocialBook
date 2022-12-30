@@ -38,7 +38,7 @@ import ProvateRoutes from '../Routes/ProvateRoutes/ProvateRoutes';
             {
                 path:'/media',
                 element:<ProvateRoutes><Media></Media></ProvateRoutes>,
-                loader:()=>fetch(`http://localhost:5000/allmediaposts`)
+                loader:()=>fetch(`https://socialbook-server-seven.vercel.app/allmediaposts`)
 
             },
             {
@@ -49,19 +49,19 @@ import ProvateRoutes from '../Routes/ProvateRoutes/ProvateRoutes';
             {
                 path:'/allabout',
                 element:<ProvateRoutes><AllAbout></AllAbout></ProvateRoutes>,
-                loader:() => fetch(`http://localhost:5000/aboutusers`)
+                loader:() => fetch(`https://socialbook-server-seven.vercel.app/aboutusers`)
             },
             {
                 path:'/update/:email',
                 element:<ProvateRoutes><EditAbout></EditAbout></ProvateRoutes>,
-                loader:({params}) => fetch(`http://localhost:5000/users/${params.email}`)
+                loader:({params}) => fetch(`https://socialbook-server-seven.vercel.app/users/${params.email}`)
             }
         ]
     },
     {
         path:'/',
         element:<Posts></Posts>,
-        // loader:()=> fetch(`http://localhost:5000/allmediaposts`)
+        // loader:()=> fetch(`https://socialbook-server-seven.vercel.app/allmediaposts`)
     },
    
 ])

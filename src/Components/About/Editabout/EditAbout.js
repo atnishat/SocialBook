@@ -17,7 +17,7 @@ const EditAbout = () => {
 
 
         
-        fetch(`http://localhost:5000/users/${storeUser.email}`, {
+        fetch(`https://socialbook-server-seven.vercel.app/users/${storeUser.email}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json',

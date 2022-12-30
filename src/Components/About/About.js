@@ -18,7 +18,7 @@ const About = () => {
         console.log(event);
         event.preventDefault();
         console.log(allUsers);
-        fetch('http://localhost:5000/aboutusers', {
+        fetch('https://socialbook-server-seven.vercel.app/aboutusers', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json', 

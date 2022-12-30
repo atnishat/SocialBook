@@ -35,7 +35,7 @@ const Addpost = () => {
 
                     //       // save media information to the database
 
-                    fetch('http://localhost:5000/allmediaposts', {
+                    fetch('https://socialbook-server-seven.vercel.app/allmediaposts', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',
